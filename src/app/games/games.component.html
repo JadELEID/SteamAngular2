@@ -1,0 +1,19 @@
+<h1> Liste des jeux : </h1>
+
+<ul>
+    <li *ngFor="let game of games">
+
+      <div>
+          {{game.name}}
+      </div>
+
+        <div>
+            <li *ngFor="let url of game.getScreenshots()">
+
+                <img src="{{url}}">
+
+            </li>
+
+        </div>
+    </li>
+</ul>
