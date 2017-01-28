@@ -19,4 +19,13 @@ export class Jeu {
             return [];
         }
     }
+
+    getCover()
+    {
+        if(this.cover != null) {
+            return this.cover.map(cover => cover.url);
+        } else {
+            return "";
+        }
+    }
 }

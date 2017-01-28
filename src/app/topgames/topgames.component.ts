@@ -3,22 +3,17 @@ import { DisplayGamesService } from '../display-games.service';
 import { Jeu } from '../jeu';
 
 @Component({
-  selector: 'app-games',
-  templateUrl: './games.component.html',
-  styleUrls: ['./games.component.css']
+  selector: 'app-topgames',
+  templateUrl: './topgames.component.html',
+  styleUrls: ['./topgames.component.css']
 })
-export class GamesComponent implements OnInit {
+export class TopgamesComponent implements OnInit {
 
   games;
   constructor(private displayGamesService:DisplayGamesService) { }
 
-  OnSelect()
-  {
-    alert('test');
-  }
-
   ngOnInit() {
-    this.games = this.displayGamesService.getGames();
+    this.games = this.displayGamesService.getTopGames();
   }
 
 }

@@ -14,7 +14,13 @@ getGames()
   return this.jeux;
 }
 
-  getJeuByID() {
+getTopGames()
+{
+  return this.jeux.slice(1,4);
+}
+
+  getJeuByID()
+  {
 
     return this.jeux[0];
 
