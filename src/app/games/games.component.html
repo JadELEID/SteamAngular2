@@ -9,14 +9,19 @@
           {{game.name}}
       </h3>
 
+
+        <h4> {{game.summary | slice:0:200}}...</h4>
+
+        <p> Screenshots of the game :</p>
+
             <div *ngFor="let url of game.getScreenshots()" class="col-lg-3">
 
-                <img src="{{url}}" class="img-responsive">
-
+                <img src="{{url}}" class="img-responsive margindefault imgmodif">
             </div>
 
+
         <div class="col-lg-12 text-center">
-            <button (click)="onSelect()" class="btn btn-primary btn-lg">En savoir plus <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> </button>
+            <button (click)="onSelect()" class="btn btn-primary btn-lg"> Read More <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> </button>
         </div>
 
     </div>
